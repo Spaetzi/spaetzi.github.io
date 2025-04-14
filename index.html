@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spaetzi Cuisine - Livre Culinaire Alsacien</title>
+    <!-- Image pour les réseaux sociaux -->
+    <meta property="og:image" content="https://example.com/chemin-vers-votre-image.jpg">
+    <meta name="twitter:image" content="https://example.com/chemin-vers-votre-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         /* Reset et polices */
         * {
@@ -25,47 +30,7 @@
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
-            padding-bottom: 80px; /* Espace pour les liens sociaux */
-        }
-        
-        /* Header avec logo */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding: 15px 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo-img {
-            height: 50px;
-            width: auto;
-        }
-        
-        .logo-text {
-            font-family: 'Parkinsans', cursive;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
+            padding-bottom: 80px;
         }
         
         /* Image de fond avec overlay */
@@ -98,7 +63,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 6rem 2rem 2rem; /* Ajusté pour le header */
+            padding: 2rem;
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -171,7 +136,7 @@
             transform: translateX(2px);
         }
         
-        /* Liens réseaux sociaux - Version améliorée */
+        /* Liens réseaux sociaux */
         .social-links {
             position: fixed;
             bottom: 0;
@@ -211,16 +176,7 @@
             height: 20px;
         }
 
-        /* Adaptation mobile */
         @media (max-width: 768px) {
-            .logo-text {
-                font-size: 1.5rem;
-            }
-            
-            .logo-img {
-                height: 40px;
-            }
-            
             h1 {
                 font-size: 2.5rem;
             }
@@ -249,16 +205,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header avec logo -->
-    <header>
-        <div class="header-content">
-            <div class="logo-container">
-                <img src="logo-spaetzi.png" alt="Logo Spaetzi Cuisine" class="logo-img">
-                <div class="logo-text">Spaetzi Cuisine</div>
-            </div>
-        </div>
-    </header>
-
     <!-- Image de fond avec overlay -->
     <div class="hero-image">
         <div class="bg-overlay"></div>
@@ -271,16 +217,13 @@
         <div class="separator"></div>
         
         <p>
-            Découvrez l'Alsace à travers ses saveurs authentiques avec Spaetzi Cuisine.
-            Notre livre culinaire vous invite à un voyage gastronomique à travers les recettes
-            traditionnelles transmises de génération en génération.
+            Spaetzi Cuisine, c'est l'histoire d'un voyage culinaire au cœur de l'Alsace.
+            Notre mission : faire (re)découvrir les trésors de la gastronomie locale à travers notre premier ouvrage, Le Voyage Culinaire de Spaetzi.
             <br><br>
-            Chaque page est une invitation à explorer les richesses de notre terroir,
-            avec des recettes adaptées aux cuisiniers modernes tout en respectant
-            les traditions alsaciennes.
+            Ce livre unique vous emmène de village en village à la rencontre de recettes authentiques, transmises de génération en génération.
+            Chaque page rend hommage aux saveurs, aux traditions et au savoir-faire de nos grands-mères.
             <br><br>
-            Commandez dès maintenant votre exemplaire et laissez-vous guider
-            dans cette aventure culinaire unique.
+            Commandez dès maintenant et laissez-vous embarquer dans une aventure gourmande, entre mémoire et modernité.
         </p>
         
         <button class="btn" onclick="window.open('https://spaetzicuisine.bigcartel.com/', '_blank')">
@@ -295,7 +238,6 @@
 
     <!-- Liens réseaux sociaux -->
     <div class="social-links">
-        <!-- Instagram -->
         <a href="https://www.instagram.com/voyage.culinaire_spaetzi/" class="social-link" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -303,22 +245,16 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
         </a>
-        
-        <!-- TikTok -->
         <a href="https://www.tiktok.com/@spaetzii" class="social-link" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
             </svg>
         </a>
-        
-        <!-- Facebook -->
         <a href="https://www.facebook.com/people/Spaetzi-Cuisine/" class="social-link" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
             </svg>
         </a>
-        
-        <!-- Email -->
         <a href="mailto:contact@spaetzicuisine.fr" class="social-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>

@@ -25,6 +25,7 @@
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
+            padding-bottom: 80px; /* Espace pour les liens sociaux */
         }
         
         /* Image de fond avec overlay */
@@ -130,16 +131,20 @@
             transform: translateX(2px);
         }
         
-        /* Liens réseaux sociaux */
+        /* Liens réseaux sociaux - Version améliorée */
         .social-links {
             position: fixed;
-            bottom: 2rem;
+            bottom: 0;
             left: 0;
             right: 0;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             z-index: 10;
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         
         .social-link {
@@ -164,6 +169,33 @@
         .social-link svg {
             width: 20px;
             height: 20px;
+        }
+
+        /* Adaptation mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .social-links {
+                gap: 1rem;
+                padding: 10px 0;
+            }
+            
+            .social-link {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .social-link svg {
+                width: 18px;
+                height: 18px;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -200,7 +232,7 @@
         </button>
     </main>
 
-    <!-- Liens réseaux sociaux - Version corrigée -->
+    <!-- Liens réseaux sociaux - Version corrigée pour mobile -->
     <div class="social-links">
         <!-- Instagram -->
         <a href="https://www.instagram.com/voyage.culinaire_spaetzi/" class="social-link" target="_blank" rel="noopener noreferrer">

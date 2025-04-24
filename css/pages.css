@@ -1,0 +1,415 @@
+/* ========================================== */
+/* STRUCTURE GLOBALE POUR TOUTES LES PAGES */
+/* ========================================== */
+.legal-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem;
+    background-color: white;
+    color: #333;
+    min-height: calc(100vh - 150px - 120px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.legal-container h1 {
+    font-family: 'Parkinsans', cursive;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid #A40000;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.legal-container h1 br {
+    display: block;
+    content: "";
+    margin-bottom: 0.5rem;
+}
+
+.legal-container h2 {
+    font-family: 'Parkinsans', cursive;
+    font-size: 1.8rem;
+    color: #A40000;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.legal-container p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.legal-container a {
+    color: #A40000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.legal-container a:hover {
+    color: #DC0000;
+    text-decoration: underline;
+}
+
+/* ========================================== */
+/* STYLES SPÉCIFIQUES À LA PAGE ÉVÉNEMENT */
+/* ========================================== */
+.event-content {
+    margin-top: 2rem;
+}
+
+.event-intro {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.lead {
+    font-size: 1.3rem;
+    color: #444;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Style unifié pour les blocs d'information */
+.practical-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.practical-info-block {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.practical-info-block h3 {
+    color: #A40000;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-family: 'Parkinsans', cursive;
+}
+
+.practical-info-block ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.practical-info-block li {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.practical-info-block li:before {
+    content: "•";
+    color: #A40000;
+    position: absolute;
+    left: 0;
+}
+
+.emoji-icon {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+/* Styles pour la carte */
+.event-map {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Description de l'événement */
+.event-description {
+    margin-top: 2rem;
+}
+
+.event-description h2 {
+    font-family: 'Parkinsans', cursive;
+    font-size: 1.8rem;
+    color: #A40000;
+    margin: 2rem 0 1rem;
+}
+
+.event-program {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    list-style-type: square;
+    color: #444;
+}
+
+.event-program li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.event-highlight {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 1.5rem;
+    border-left: 3px solid #FFD700;
+    margin: 2rem 0;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+.event-highlight p {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.event-important {
+    background-color: rgba(164, 0, 0, 0.05);
+    padding: 1.5rem;
+    border-left: 3px solid #A40000;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.event-important h3 {
+    font-family: 'Parkinsans', cursive;
+    color: #A40000;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.event-important p {
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+}
+
+.event-cta {
+    text-align: center;
+    margin: 2.5rem 0 1rem;
+    font-size: 1.2rem;
+    color: #A40000;
+    font-weight: 600;
+}
+
+/* ========================================== */
+/* STYLES EXISTANTS POUR AUTRES PAGES */
+/* ========================================== */
+.legal-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.privacy-content section {
+    margin-bottom: 3rem;
+}
+
+.privacy-content h2 {
+    font-size: 1.6rem;
+    color: #A40000;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(164, 0, 0, 0.2);
+}
+
+.privacy-content ul {
+    margin: 1.5rem 0 2rem 2rem;
+    list-style-type: square;
+}
+
+.privacy-content li {
+    margin-bottom: 0.7rem;
+    padding-left: 0.5rem;
+}
+
+.privacy-content li::before {
+    content: none;
+}
+
+.email-link {
+    font-weight: 700;
+    border-bottom: 1px dashed #A40000;
+}
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.sitemap-section {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2rem;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.sitemap-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.sitemap-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(164, 0, 0, 0.2);
+}
+
+.sitemap-icon {
+    width: 24px;
+    height: 24px;
+    fill: #A40000;
+}
+
+.sitemap-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-links li {
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+}
+
+.sitemap-links li::before {
+    content: none;
+}
+
+.sitemap-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.sitemap-links a::before {
+    content: "→";
+    color: #A40000;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.sitemap-links a:hover {
+    color: #A40000;
+    padding-left: 5px;
+}
+
+.sitemap-links a:hover::before {
+    transform: translateX(5px);
+}
+
+.sitemap-notice {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #ddd;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ========================================== */
+/* RESPONSIVE DESIGN */
+/* ========================================== */
+@media (max-width: 900px) {
+    .legal-container {
+        padding: 3.5rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-container {
+        padding: 3rem;
+        min-height: calc(100vh - 120px - 100px);
+    }
+    
+    .legal-container h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .privacy-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .practical-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .event-cta {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .legal-container {
+        padding: 2.5rem 2rem;
+        width: 95%;
+    }
+    
+    .legal-container h1 {
+        font-size: 2rem;
+    }
+    
+    .privacy-content ul {
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .legal-container h1 {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+    
+    .sitemap-section {
+        padding: 1.5rem;
+    }
+    
+    .sitemap-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .sitemap-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

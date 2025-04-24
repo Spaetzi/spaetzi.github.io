@@ -3,224 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- URL canonique en HTTPS -->
     <link rel="canonical" href="https://spaetzicuisine.fr/" />
     <title>Spaetzi Cuisine | Créateur de guides culinaires</title>
-    <!-- Meta pour SEO -->
     <meta name="description" content="Voyagez à travers les recettes traditionnelles d'Alsace village par village grâce à notre guide culinaire.">
     <meta name="keywords" content="cuisine alsacienne, recettes alsace, spécialités alsaciennes, spaetzicuisine, spaetzi cuisine, livre de recettes alsace, le voyage culinaire de spaetzi">
     <meta name="author" content="Spaetzi Cuisine">
-    <!-- Meta pour réseaux sociaux -->
     <meta property="og:title" content="Spaetzi Cuisine - Créateur de guides culinaires" />
     <meta property="og:description" content="Voyagez à travers l'Alsace avec notre guide culinaire unique, village par village." />
     <meta property="og:image" content="https://spaetzicuisine.fr/favicon.png" />
     <meta property="og:url" content="https://spaetzicuisine.fr" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset et polices */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         @font-face {
             font-family: 'Parkinsans';
             src: url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;700&display=swap');
             font-display: swap;
         }
-        
-        body {
-            font-family: 'Nunito Sans', sans-serif;
-            color: #fff;
-            line-height: 1.6;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-            padding-bottom: 80px;
-        }
-        
-        /* Image de fond avec overlay */
-        .hero-image {
-            background-image: url('image-hero.jpg');
-            background-size: cover;
-            background-position: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -2;
-        }
-        
-        .bg-overlay {
-            background: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-        
-        /* Contenu principal */
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 2rem;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        
-        h1 {
-            font-family: 'Parkinsans', cursive;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            letter-spacing: 1px;
-        }
-        
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 4rem;
-            }
-        }
-        
-        .separator {
-            height: 1px;
-            width: 80px;
-            background-color: rgba(255, 255, 255, 0.2);
-            margin: 1.5rem auto;
-        }
-        
-        p {
-            font-family: 'Nunito Sans', sans-serif;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-        }
-        
-        /* Bouton */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #A40000;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            font-family: 'Nunito Sans', sans-serif;
-        }
-        
-        .btn:hover {
-            background-color: #DC0000;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-        }
-        
-        .btn svg {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .btn:hover svg {
-            transform: translateX(2px);
-        }
-        
-        /* Liens réseaux sociaux */
-        .social-links {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            z-index: 10;
-            padding: 15px 0;
-            background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-        }
-        
-        .social-link {
-            color: white;
-            opacity: 0.8;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        .social-link:hover {
-            opacity: 1;
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-        
-        .social-link svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            p {
-                font-size: 1rem;
-                padding: 0 15px;
-            }
-            
-            .social-links {
-                gap: 1rem;
-                padding: 10px 0;
-            }
-            
-            .social-link {
-                width: 36px;
-                height: 36px;
-            }
-            
-            .social-link svg {
-                width: 18px;
-                height: 18px;
-            }
-        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+    
 <body>
-    <!-- Image de fond avec overlay -->
+    <div class="header-banner" id="headerBanner">
+        <div class="logo-container">
+            <a href="/index.html" class="logo-link">
+                <img src="/images/logo.png" alt="Spaetzi Cuisine Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-buttons">
+            <a class="accueil-self-btn">Accueil</a>
+            <span class="button-separator">|</span>
+            <a href="https://spaetzicuisine.bigcartel.com/" class="boutique-btn">Boutique</a>
+            <span class="button-separator">|</span>
+            <a href="/actu.html" class="event-btn">Évènement</a>
+        </div>
+    </div>
+
+    <div class="announcement-banner" id="announcementBanner">
+        <div class="announcement-content">
+            🎉 Évènement de remise du livre "Le Voyage Culinaire de Spaetzi" !<br>
+            📅 Dimanche 27 avril à 11h<br>
+            📍 La Poudrière (Sélestat)<br>
+            🎈 Remise des livres, apéritif déjeunatoire, tirage au sort et vente du livre sur place !<br>
+            <a href="/actu.html">En savoir plus</a>
+        </div>
+        <button class="close-announcement" id="closeAnnouncement">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    
     <div class="hero-image">
         <div class="bg-overlay"></div>
     </div>
 
-    <!-- Contenu principal -->
     <main class="main-content">
         <h1>Spaetzi Cuisine</h1>
         
@@ -228,7 +69,9 @@
         
         <p>
             Spaetzi Cuisine, c'est l'histoire d'un voyage culinaire au cœur de l'Alsace.
-            Notre mission : faire (re)découvrir les trésors de la gastronomie locale à travers notre premier ouvrage, Le Voyage Culinaire de Spaetzi.
+            Notre mission, faire (re)découvrir les trésors de la gastronomie locale à travers notre premier ouvrage :
+            <br><br>
+            <a class="livre-btn">Le Voyage Culinaire de Spaetzi</a>
             <br><br>
             Ce livre unique vous emmène de village en village à la rencontre de recettes authentiques, transmises de génération en génération.
             Chaque page rend hommage aux saveurs, aux traditions et au savoir-faire de nos grands-mères.
@@ -246,31 +89,50 @@
         </button>
     </main>
 
-    <!-- Liens réseaux sociaux -->
-    <div class="social-links">
-        <a href="https://www.instagram.com/voyage.culinaire_spaetzi/" class="social-link" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-        </a>
-        <a href="https://www.tiktok.com/@spaetzii" class="social-link" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-            </svg>
-        </a>
-        <a href="https://www.facebook.com/people/Spaetzi-Cuisine/pfbid0vG1PuFCpETNzHMk8xQ371M7DXagnnSBwfRUGcqM6yrqaahrgKrbwFzjkYaRhWojwl/" class="social-link" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-        </a>
-        <a href="mailto:contact@spaetzicuisine.fr" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-        </a>
-    </div>
+    
+
+    <footer>
+        <!-- Barre des réseaux sociaux -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/voyage.culinaire_spaetzi/" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@spaetzii" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/people/Spaetzi-Cuisine/pfbid0vG1PuFCpETNzHMk8xQ371M7DXagnnSBwfRUGcqM6yrqaahrgKrbwFzjkYaRhWojwl/" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+            <a href="mailto:contact@spaetzicuisine.fr" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="footer-separator"></div>
+        
+        <p>
+            © 2025 Spaetzi Cuisine - Tous droits réservés
+        </p>
+        <p>
+            <a href="/plan-du-site.html">Plan du site</a> | 
+            <a href="/mentions-legales.html">Mentions légales</a> | 
+            <a href="/politique-confidentialite.html">Politique de confidentialité</a> | 
+            <a href="/cgv.html">CGV</a>
+        </p>
+        <p>Mini-entreprise ® - EPA Grand-Est</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>

@@ -66,3 +66,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.dispatchEvent(new Event('scroll'));
     window.addEventListener('resize', adjustSpacing);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    hamburgerBtn.addEventListener('click', function() {
+        // Basculer l'état du menu
+        mobileMenu.classList.toggle('active');
+        // Animation hamburger
+        this.classList.toggle('active');
+    });
+    
+    // Fermer le menu quand on clique à l'extérieur
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header-banner') && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+        }
+    });
+});

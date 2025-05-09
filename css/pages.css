@@ -57,153 +57,134 @@
 }
 
 /* ========================================== */
-/* STYLES SPÉCIFIQUES À LA PAGE ÉVÉNEMENT */
+/* STYLES SPÉCIFIQUES À LA PAGE ACTUS */
 /* ========================================== */
-.event-content {
-    margin-top: 2rem;
+
+.actus-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.event-intro {
-    margin-bottom: 2.5rem;
+.actus-container h1 {
     text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: 'Parkinsans', cursive;
 }
 
-.lead {
-    font-size: 1.3rem;
-    color: #444;
-    font-weight: 500;
-    line-height: 1.6;
-}
-
-/* Style unifié pour les blocs d'information */
-.practical-info-grid {
+.articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
 }
 
-.practical-info-block {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-}
-
-.practical-info-block h3 {
-    color: #A40000;
-    margin-bottom: 0.8rem;
-    font-size: 1.2rem;
-    font-family: 'Parkinsans', cursive;
-}
-
-.practical-info-block ul {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-.practical-info-block li {
-    margin-bottom: 0.4rem;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
+.article-card {
     position: relative;
-    padding-left: 1.2rem;
-}
-
-.practical-info-block li:before {
-    content: "•";
-    color: #A40000;
-    position: absolute;
-    left: 0;
-}
-
-.emoji-icon {
-    font-size: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-/* Styles pour la carte */
-.event-map {
-    margin: 2rem 0;
-    border-radius: 8px;
+    height: 350px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-/* Description de l'événement */
-.event-description {
-    margin-top: 2rem;
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.event-description h2 {
-    font-family: 'Parkinsans', cursive;
-    font-size: 1.8rem;
-    color: #A40000;
-    margin: 2rem 0 1rem;
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
 }
 
-.event-program {
-    margin: 1.5rem 0;
-    padding-left: 1.5rem;
-    list-style-type: square;
-    color: #444;
+.article-card:hover .card-image {
+    transform: scale(1.05);
 }
 
-.event-program li {
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    padding: 2rem 1.5rem 1.5rem;
+    color: white;
 }
 
-.event-highlight {
-    background-color: rgba(255, 215, 0, 0.1);
-    padding: 1.5rem;
-    border-left: 3px solid #FFD700;
-    margin: 2rem 0;
-    border-radius: 4px;
-    font-style: italic;
-}
-
-.event-highlight p {
-    margin: 0;
-    color: #333;
-    font-size: 1.1rem;
-}
-
-.event-important {
-    background-color: rgba(164, 0, 0, 0.05);
-    padding: 1.5rem;
-    border-left: 3px solid #A40000;
-    margin: 2rem 0;
-    border-radius: 4px;
-}
-
-.event-important h3 {
-    font-family: 'Parkinsans', cursive;
-    color: #A40000;
+.card-overlay time {
+    display: block;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    color: rgba(255,255,255,0.9);
 }
 
-.event-important p {
-    color: #333;
-    font-weight: 500;
+.card-overlay h2 {
+    font-family: 'Parkinsans', cursive;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.card-overlay p {
     margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
-.event-cta {
-    text-align: center;
-    margin: 2.5rem 0 1rem;
-    font-size: 1.2rem;
-    color: #A40000;
-    font-weight: 600;
+/* Animation au chargement */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+.article-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.article-card:nth-child(1) { animation-delay: 0.1s; }
+.article-card:nth-child(2) { animation-delay: 0.3s; }
+.article-card:nth-child(3) { animation-delay: 0.5s; }
+.article-card:nth-child(4) { animation-delay: 0.7s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .article-card {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-card {
+        height: 250px;
+    }
+    
+    .card-overlay {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .card-overlay h2 {
+        font-size: 1.3rem;
+    }
 
 /* ========================================== */
 /* STYLES EXISTANTS POUR AUTRES PAGES */
